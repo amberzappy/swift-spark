@@ -13,17 +13,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var Spark2: UILabel!
     
-    var  tapCount = 0
+   
+    @IBOutlet weak var Text1: UITextField!
+    
+    @IBOutlet weak var Text2: UITextField!
    
     @IBAction func buttonTapped2(_ sender: Any) {
         Spark2.text = "tI sserP t'noD esaelP"
     }
     @IBAction func buttonTapped1(_ sender: Any) {
-        tapCount = tapCount + 1
-        if tapCount >= 10 {
-            Spark.text = "I'm all tapped out, man"
-        }
+        
+        Spark.text = "Anser: \(Double(Text1.text!)! + Double(Text2.text!)!)"
+    
     }
+    
        override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
